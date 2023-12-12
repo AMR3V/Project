@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" style="width: 100%"
+        style="max-width: 100%; height: auto;">
+    <title>PROJECTS | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background-color: rgb(6, 6, 133);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            text-decoration: none;
+            font-size: 1.02rem;
+            color: blueviolet;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .sm {
+            background-color: rgb(219, 41, 101);
+        }
+
+        .sm ul {
+            display: flex;
+            margin: 0px 50px;
+            justify-content: baseline;
+        }
+
+        .sm ul li {
+            list-style: none;
+            margin: 10px 20px;
+            width: 150px;
+        }
+
+        .sm ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .sm ul li a:hover {
+            text-decoration: none;
+            color: aquamarine;
+            font-size: 1.02rem;
+        }
+
+        .footerright {
+            color: white;
+            text-align: center;
+        }
+
+        .header {
+            text-align: center;
+            color: #fff;
+            padding: 0.1rem;
+            position: relative;
+            font-size: 2rem;
+            margin: 50px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            grid-gap: 1rem;
+            padding: 1rem 80px;
+            font-size: 1.2rem;
+        }
+
+        .skill-box {
+            padding: 1rem;
+            color: #ddd;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        .skill-box:hover>.skill-title:after,
+        .skill-box:hover>.skill-title:before {
+            width: 35px;
+        }
+
+        .skill-box:hover .img {
+            transition: translateY(-10%);
+
+        }
+
+        .skill-title {
+            padding: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .skill-icon1 {
+            width: 75px;
+            height: 75px;          
+            z-index: 2;
+            margin-top: 5px;
+        }
+
+        .skill-icon2 {
+            width: 75px;
+            height: 70px;          
+            z-index: 2;
+            margin-top: 2px;
+        }
+
+        .skill-icon3 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            z-index: 2;
+        }
+        .skill-icon4 {
+            width: 75px;
+            height: 75px;          
+            z-index: 2;
+            margin-top: 5px;
+        }
+
+        .skill-icon5 {
+            width: 75px;
+            height: 70px;          
+            z-index: 2;
+            margin-top: 2px;
+        }
+
+        .skill-icon6 {
+            width:75px;
+            height: 75px;
+            border-radius: 20px;
+            z-index: 2;
+        }
+
+        .skill-title:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 0;
+            height: 4px;
+            border-radius: 2px 0 0 2px;
+            background-color: #2ecc71;
+            transition: 0.5s;
+        }
+
+        .skill-title:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 4px;
+            border-radius: 2px 0 0 2px;
+            background-color: #2ecc71;
+            transition: 0.5s;
+        }
+
+        .skill-title h3 {
+            color: #fff;
+        }
+
+        .img {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            border-radius: 60px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            margin-left: 130px;
+        }
+
+        .img:after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 50%;
+            height: 100px;
+            background: rgba(100, 100, 100, 0.3);
+            border-radius: 45px 0 0 45px;
+
+        }
+
+        .header1 {
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 10px;
+        }
+        .demo1{
+            font-size: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .demo1:hover{
+            font-size: 1.55rem;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(219, 41, 101);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <h4>RITWIK VERMA</h4>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/index.html"><b>HOME</b></a></li>
+                    <li><a href="/About.html"><b>ABOUT</b></a></li>
+                    <li><a href="/Projects.html"><b>PROJECTS</b></a></li>
+                    <li><a href="/Contactme.html"><b>CONTACT ME</b></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header"><u>MY PROJECTS</u></div>
+    <div class="container">
+
+        <div class="skill-box">
+            <div class="img">
+                <img src="stopwatch.png" class="skill-icon1">
+            </div>
+            <h3>StopWatch</h3>
+            <div class="skill-title"></div>
+            <a class="demo1" href="https://amr3v.github.io/Stopwatch/" target="_blank">VISIT</a>
+            <p>Customizable stopwatch project measuring time precisely, enhancing user time-tracking experiences.</p>
+        </div>
+
+        <div class="skill-box">
+            <div class="img">
+                <img src="Timer.png" class="skill-icon2">
+            </div>
+            <h3>Countdown Timer</h3>
+            <div class="skill-title">
+            </div>
+            <a class="demo1" href="https://amr3v.github.io/Countdown/" target="_blank">VISIT</a>
+            <p>Sleek countdown timer project for accurate and visually engaging time management.</p>
+        </div>
+
+        <div class="skill-box">
+            <div class="img">
+                <img src="TicTacToe.png" class="skill-icon3">
+            </div>
+            <h3>Tic Tac Toe</h3>
+            <div class="skill-title">
+            </div>
+            <a class="demo1" href="https://github.com/AMR3V/TicTacToe" target="_blank">Visit Github</a>
+            <p>Java-based Tic Tac Toe game implementing a classic two-player experience.</p>
+        </div>
+        
+        <div class="skill-box">
+            <div class="img">
+                <img src="calendar.png" class="skill-icon4">
+            </div>
+            <h3>Calendar</h3>
+            <div class="skill-title"></div>
+            <a class="demo1" href="https://amr3v.github.io/Calendar/" target="_blank">VISIT</a>
+            <p>HTML-based calendar providing an intuitive interface for date navigation and scheduling.</p>
+        </div>
+
+        <div class="skill-box">
+            <div class="img">
+                <img src="digiclock.png" class="skill-icon5">
+            </div>
+            <h3>Digital Clock</h3>
+            <div class="skill-title"></div>
+            <a class="demo1" href="https://amr3v.github.io/DigitalClock/" target="_blank">VISIT</a>
+            <p>HTML and JavaScript digital clock for real-time and accurate timekeeping.</p>
+        </div>
+
+        <div class="skill-box">
+            <div class="img">
+                <img src="Snakegame.jpeg" class="skill-icon6">
+            </div>
+            <h3>Snake Game</h3>
+            <div class="skill-title"></div>
+            <a class="demo1" href="https://github.com/AMR3V/SnakeGame" target="_blank">Visit Github</a>
+            <p>Java-based Snake game offering a classic and interactive gaming experience</p>
+        </div>
+    </div>
+
+    <footer class="sm">
+        <ul>
+            <li><a href="mailto: ritwik.verma2612@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/ritwikverma1201" target="_blank">LinkedIn</a></li>
+            <li><a href="https://instagram.com/_.amrev._" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/kiwtir.amrev" target="_blank">Faceook</a></li>
+            <li><a href="https://x.com/4MR3V" target="_blank">X</a></li>
+            <li><a href="https://www.snapchat.com/add/k.amr3v" target="_blank">Snapchat</a></li>
+            <li><a href="https://github.com/AMR3V" target="_blank">GitHub</a></li>
+        </ul>
+    </footer>
+    <div class="footerright">
+        Ritwik's Developer Portal | All rights reserved
+    </div>
+</body>
+
+</html>
